@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Impact of Attendance on High Exam Scores</title>
+    <link rel="stylesheet" href="Style.css" />
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body class="chart-page">
+
+    <div class="top-bar">
+        <a href="HomePage.html" class="home-btn">← Back to Home</a>
+    </div>
+
+    <div class="header">
+        <h1 class="chart-title">Impact of Attendance on Exam Performance by Attendance Level</h1>
+        <p>
+    This chart shows the percentage of students scoring 70 or above versus below 70, grouped by attendance level. Use the gender filter to compare student groups.
+</p>
+    </div>
+
+    <div class="filter-container" style="margin-bottom: 25px;">
+    <label for="genderFilter">Filter by Gender:</label>
+    <select id="genderFilter">
+        <option value="All">All</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+</div>
+
+    <div class="chart-wrapper">
+    <div class="small-card" style="margin-top: 20px; margin-bottom: 30px; overflow: hidden;">
+        <div id="chart" style="padding-top: 10px; padding-bottom: 10px;"></div>
+    </div>
+
+<div class="insight-box">
+    <div class="insight-title">Key Insight</div>
+    <p class="insight-text">
+        The chart indicates that attendance has a strong positive association with exam performance.
+        Students with <strong>90% or higher attendance</strong> are considerably more likely to score
+        <strong>70 or above</strong> compared with students whose attendance is below 90%.
+        This pattern suggests that consistent attendance may play an important role in improving
+        academic achievement.
+    </p>
+</div>
+
+    <div id="chartInsight"></div>
+</div>
+
+    <script src="JS/Bar.js"></script>
+</body>
+</html>
